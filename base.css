@@ -1,0 +1,45 @@
+body.center {
+text-align: center;
+}
+
+string.red {
+color: #ff0000;
+}
+
+string.green {
+color: #00ff00;
+}
+
+string.blue {
+color: #0000ff;
+}
+
+string.yellow {
+color: #ffff00;
+}
+
+string.white {
+color: #ffffff;
+}
+
+string.black {
+color: #000000;
+}
+
+pre.gray {
+border: 2px #c0c0c0 solid;
+background-color: #efefef;
+font-size: 16px;
+font-family: 'ＭＳＰ ゴシック', 'ＭＳ Ｐ ゴシック', 'ＭＳ Ｐゴシック', 'MSP Gothic';
+}
+
+pre.red {
+border: 2px #c0c0c0 solid;
+background-color: #ff0000;
+}
+
+func.type {
+font-weight: bold;
+color: #33ff33;
+font-size: 16px;
+}

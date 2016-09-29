@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+      注意!
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ">
+  </head>
+  <body>
+    この環境は'Database Control'を実行する最低要件に満たしていない可能性があります。
+    <br />
+    最低要件:
+    <br />
+    ・前提：Apache2 (IISでは動作しません、推奨:Apache2.4 以上)
+    <br />
+    ・Apache2: <br />
+	- .htaccess 、 .htpasswdが利用可能
+	- DirectoryIndex(.htaccess)が利用可能
+	- Apache2モジュール"auth_digest"が利用可能、"auth_basic"が無効
+	- Apache2モジュール"php5"か、"php7"か"php7.0"などいずれか1つが利用可能(phpバイナリでも使える)
+	- モジュール mod_so.c、core.c
+    <br />
+    ・PHP 5.6以上
+    <br />
+    ・php: <br />
+	- mysqliクラス(ext/mysqlではありません!)<br />
+	- function関数<br />
+	- class関数<br />
+	- chmod関数<br />
+	- 変数<br />
+	- system関数<br />
+	- echo関数<br />
+	- printf関数<br />
+	- if関数<br />
+	- else関数<br />
+	- elseif関数<br />
+	- die関数<br />
+	- ショートタグ('<?=$hoge?>')<br />
+	- グローバル変数($_POST)<br />
+    <br />
+    ・パーミッション、ユーザー権限をサポートしている
+    <br />
+    ・MySQL、Microsoft SQL Server、PostgreSQLなど、各種SQLを最低1つ使えること
+    <br />
+    ・/bin/sh が存在すること、rm、chmodが使えること
+    <br />
+    <br />
+    続行するには <a href="./configure.php" title="Configure Database Control" target="_top">ここ</a> をクリックしてください。
+    <br />
+    (トップページ:<a href="./index.php" title="Database Control">ここ</a>)
+  </body>
+</html>

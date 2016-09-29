@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+
+# Auth password is 'sql_control', user is 'sql'
+# AuthType is Digest, Please enable httpd module:'auth_digest', disable 'auth_basic'
+AuthType Digest
+AuthName "Database Control"
+#require valid-user
+AuthUserFile "./.htpasswd"
+
