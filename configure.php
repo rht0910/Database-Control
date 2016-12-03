@@ -9,11 +9,12 @@
   <body class="center">
 <?php
 system("./setup");
-echo "初期化が完了しました。[注意:Microsoft Edgeの場合、cssが適用されない可能性があります。]";
+echo "初期化が完了しました。";
 $confirm = $_POST['conf'];
 $host = $_POST['host'];
 $port = $_POST['port'];
 $sock = $_POST['sock'];
+$user = $_POST['user'];
 if($confirm != "true") {
 ?>
     <form action="configure.php" method="post">
@@ -22,6 +23,8 @@ if($confirm != "true") {
       デフォルト ポート：<input type="text" name="port" value="3306" placeholder="ポート" />
       <br />
       デフォルト ソケット：<input type="text" name="sock" value="/var/run/mysqld/mysqld.sock" placeholder="ソケット" />
+      <br />
+      デフォルト ユーザー：<input type="text" name="user" placeholder="ユーザー" />
       <input type="hidden" name="conf" value="true" />
       <!-- 上のコードは確認画面に進むために必要です -->
       <br />
@@ -49,13 +52,15 @@ if($confirm != "true") {
 	<br />
 	デフォルト ソケット：<?=$sock?>
 	<br />
+	デフォルト ユーザー：<?=$user?>
+	<br />
       </pre>
       <input type="hidden" name="host" value="<?=$host?>" />
-      <input type="hidden" name="user" value="root" />
+      <input type="hidden" name="user" value="<?=$user?>" />
       <input type="hidden" name="port" value="<?=$port?>" />
       <input type="hidden" name="sock" value="<?=$sock?>" />
       <input type="hidden" name="confirm" value="true" />
-      <!-- 上のinputタグはconfig.phpへの書き込みのために必要です。 -->
+      <!-- 上のhiddenタグはconfig.phpへの書き込みのために必要です。 -->
       <input type="submit" value="設定ファイルを作成" />
       <br />
       <br />

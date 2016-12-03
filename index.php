@@ -3,11 +3,6 @@ if(file_exists("configure.php")) {
 die("<!DOCTYPE HTML><html><head><title>セットアップ未完了</title></head><body>まだセットアップが完了していません。<br />先にセットアップをしてください。<br />セットアップは<a href=\"configure.php\">ここから</a>できます。</body></html>");
 exit;
 }
-$del = $_POST['configured'];
-if($del == "true")
-{
-    rename("configure.php", "re-config.php");
-}
 ?>
 <!DOCTYPE HTML>
 <html>
