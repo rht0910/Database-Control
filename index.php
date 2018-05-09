@@ -3,6 +3,7 @@ if(file_exists("configure.php")) {
 die("<!DOCTYPE HTML><html><head><title>セットアップ未完了</title></head><body>まだセットアップが完了していません。<br />先にセットアップをしてください。<br />セットアップは<a href=\"configure.php\">ここから</a>できます。</body></html>");
 exit;
 }
+require_once("config.php");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -13,13 +14,15 @@ exit;
   </head>
   <body>
     <form action="sql.php" method="post">
-      ホスト：<input type="text" name="host" placeholder="ホスト" />
+      ホスト：<input type="text" name="host" value="<?=$bhost?>" placeholder="ホスト" />
       <br />
-      rootのパスワード：<input type="password" name="pass" placeholder="パスワード" require />
+      ユーザー：<input type="text" name="user" value="<?=$buser?>" placeholder="ユーザー" />
       <br />
-      ポート：<input type="number" name="port" value="3306" placeholder="ポート" />
+      <?=$buser?>のパスワード：<input type="password" name="pass" placeholder="パスワード" require />
       <br />
-      ソケット：<input type="text" name="sock" value="/var/run/mysqld/mysqld.sock" placeholder="ソケット" />
+      ポート：<input type="number" name="port" value="<?=$bport?>" placeholder="ポート" />
+      <br />
+      ソケット：<input type="text" name="sock" value="<?=$bsock?>" placeholder="ソケット" />
       <br />
       データベース：<input type="text" name="db" />
       <br />

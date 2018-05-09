@@ -2,21 +2,20 @@
 <html>
 <head>
 <title>
-MySQL(i) - マルチクエリ
+MySQLi - マルチクエリ
 </title>
 </head>
 <body>
 <?php
 require_once('function.php');
+require_once('config.php');
 $host = $_POST['host'];
 $port = (int) $_POST['port'];
 $sock = $_POST['sock'];
 $db = $_POST['db'];
 $pass = $_POST['pass'];
 $query = $_POST['query'];
-$user = "root"; // $user is static.
-// pass [Deprecated]
-// query [Deprecated]
+$user = $_POST['user'];
 
 $report = new report();
 $report->false();
